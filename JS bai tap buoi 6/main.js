@@ -46,3 +46,26 @@ document.getElementById("Giaithua").onclick=function(){
     document.getElementById("giaithua-number").innerHTML=kq;
 }
 
+///bai 4
+function add(a){
+    tittle="";
+    if(a%2==0){
+        tittle="div chẵn " + i;
+    } else {
+        tittle="div lẻ " + i;
+    }
+
+    if (a%2==0) {
+        html='<div style="background:blue; height: 50px; padding: 5px; color:#fff">' + tittle + '</div>';  
+        document.getElementById("InChanLe").insertAdjacentHTML('afterend',html);
+    }else {
+        html='<div style="background:red; height: 50px; padding: 5px; color:#fff">' + tittle + '</div>';  
+        document.getElementById("InChanLe").insertAdjacentHTML('afterend',html);
+    }
+}
+document.getElementById("Print").onclick=function(){
+    var n=10;
+    for(i=10;i>0;i--){
+        add(i);
+    }
+}
